@@ -1,0 +1,4 @@
+template_path: security-group.yaml
+
+parameters:
+  VpcId: {{ stack_group_config.vpc_id }}

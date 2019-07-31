@@ -1,0 +1,9 @@
+template_path: instance.yaml
+
+parameters:
+  ImageId: "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+  InstanceType: "t2.micro"
+  SecurityGroupId:
+    !stack_output dev/sec-group.yaml::SecurityGroupId
+  SubnetId: "{{ stack_group_config.subnet_id }}"
+  Message: "{{ stack_group_config.my_message_to_the_world }}" 

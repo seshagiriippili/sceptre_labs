@@ -1,0 +1,29 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Sample Security Group for doj_labs
+
+Parameters:
+
+  VpcId:
+    Type: String
+    Description: Id for a VPC to create the security group
+
+Resources:
+
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Port 80 open to the world
+      GroupName: Port 80 open to the world
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+      VpcId: !Ref VpcId
+
+Outputs:
+
+  SecurityGroupId:
+    Description: Id for the security Group
+    Value: !GetAtt SecurityGroup.GroupId
