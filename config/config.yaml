@@ -1,9 +1,0 @@
-project_code: dojlabs
-region: ap-southeast-2
-
-# Uncomment this once the role has been provisioned in the target account
-# role_arn: "arn:aws:iam::ACCOUNT_ID:role/ROLE_NAME_FOR_SCEPTRE"
-
-# Some variables, to make your live easier
-vpc_id: "vpc-XXXXXXXXXXXXXXXXX"
-subnet_id: "subnet-XXXXXXXXXXXXXXXXX"
